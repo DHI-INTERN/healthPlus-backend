@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const DocModel = require('./../models/user_model');
+const DocModel = require('../models/Doc_model');
 const bcrypt = require('bcrypt');
 const jsonwebtoken = require('jsonwebtoken');
 const jwt = require('./../middlewares/jwt');
@@ -31,12 +31,13 @@ router.post("/createDoc", async function(req, res) {
 });
 
 router.post("/login", async function(req, res) {
-    const email = req.body.email;
-    const password = req.body.password;
-
-    const foundUser = await DocModel.findOne({ email: email });
+    const id = req.body.Docid;
+    const password = req.body.DocPass;
+    //new line
+    const foundUser = await DocModel.findOne({ Docid :  id });
     if(!foundUser) {
         res.json({ success: false, error: "user-not-found" });
+        console.log("User not found")
         console.log("Login fail");
         return;
     }

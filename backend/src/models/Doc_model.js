@@ -1,0 +1,87 @@
+
+
+const mongoose = require('mongoose');
+const DocSchema = mongoose.Schema({
+    Docid:{
+        type:String,
+        required:true,
+    },
+    DocPass:{
+        type:String,
+        required:true,
+    },
+    DocCat:{
+        type:String,
+        required:true,
+    },
+    DocDegree:{
+        type:String,
+        required:true,
+    },
+    DocDesignation:{
+        type:String,
+        required:true,
+    },
+    DocName:{
+        type:String,
+        required:true,
+    },
+    DocPhone:{
+        type:String,
+        required:true,
+    },
+    DocXp:{
+        type:String,
+        required:true,
+    },
+    DocEmail:{
+        type:String,
+        required:true,
+    },
+    DocArea:{
+        type:String,
+        required:true,
+    },
+    DocCity:{
+        type:String,
+        required:true,
+    },
+    DocState:{
+        type:String,
+        required:true,
+    },
+    DocPin:{
+        type:String,
+        required:true,
+    },
+    DocAddress:{
+        type:String,
+        require:true
+    },
+    DocLandmark:{
+        type:String,
+        required:true,
+    },
+    DocCertificateNo:{
+        type:String,
+        required:true,
+    },
+    DocHospital_Clinic:{
+        type:String,
+        required:true,
+    },
+    DocClinic:{
+        type:String,
+        required:true,
+    },
+    /*DocPhoto:{
+        type:Buffer,
+        required:true,
+    },*/
+    DateAdded:{
+        type:Date,
+        default:Date.now,
+    }
+});
+const DocModel = mongoose.model("Doc",DocSchema);
+module.exports = DocModel;
