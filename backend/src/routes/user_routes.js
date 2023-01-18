@@ -57,10 +57,10 @@ router.post("/createPat", async function(req, res) {
 });
 
 router.post("/login/doc", async function(req, res) {
-    const id = req.body.Docid;
+    const email = req.body.DocEmail;
     const password = req.body.DocPass;
     //new line
-    const foundUser = await DocModel.findOne({ Docid :  id });
+    const foundUser = await DocModel.findOne({ DocEmail :  email });
     if(!foundUser) {
         res.json({ success: false, error: "user-not-found" });
         console.log("User not found")
@@ -82,10 +82,10 @@ router.post("/login/doc", async function(req, res) {
 
 
 router.post("/login/pat", async function(req, res) {
-    const id = req.body.Userid;
+    const email = req.body.UserEmail;
     const password = req.body.UserPass;
     //new line
-    const foundUser = await UserModel.findOne({ Userid :  id });
+    const foundUser = await UserModel.findOne({ UserEmail :  email });
     if(!foundUser) {
         res.json({ success: false, error: "user-not-found" });
         console.log("User not found")
