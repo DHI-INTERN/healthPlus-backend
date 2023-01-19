@@ -1,0 +1,120 @@
+
+
+const mongoose = require('mongoose');
+const UserSchema = mongoose.Schema({
+    Userid:{
+        type:String,
+        required:true,
+    },
+    UserName:{
+        type:String,
+        required:true,
+    },
+    UserPass:{
+        type:String,
+        required:true,
+    },
+    Userage:{
+        type:String,
+        required:true,
+    },
+    Userbloodgroup:{
+        type:String,
+        required:true,
+    },
+    Usersex:{
+        type:String,
+        required:true,
+    },
+    UserPhone:{
+        type:String,
+        required:true,
+    },
+    /*Usermedicalhistory:{
+        type:Object,
+        required:true,
+    },*/
+    UserEmail:{
+        type:String,
+        required:true,
+    },
+    Usersmoke:{
+        type:String,
+        required:true,
+    },
+    Userdrinking:{
+        type:String,
+        required:true,
+    },
+    Usermedicalinsurance:{
+        type:Boolean,
+        required:true,
+        default:true,
+    },
+    Userblooddonor:{
+        type:Boolean,
+        required:true,
+        default:true,
+    },
+    UserAddress:{
+        type:String,
+        require:true
+    },
+    DateAdded:{
+        type:Date,
+        default:Date.now,
+    }
+});
+const UserModel = mongoose.model("User",UserSchema);
+module.exports = UserModel;
+
+/*const mongoose = require('mongoose');
+const PatSchema = mongoose.Schema({
+PatName:{
+        type:String,
+        required:true,
+    },
+PatPh:{
+        type:String,
+        required:true,
+    },
+PatMail:{
+        type:String,
+        required:true,
+    },
+PatAge:{
+        type:String,
+        required:true,
+    },
+PatBG:{
+        type:String,
+        required:true,
+    },
+PatSex:{
+        type:String,
+        required:true,
+    },
+PatConditions:{
+        type:Array,
+        required:true,
+    },
+PatSmoke:{
+        type:String,
+        required:true,
+    },
+PatDrink:{
+        type:String,
+        required:true,
+    },
+PatInsurance:{
+        type:String,
+        required:true,
+    },
+PatBloodDonor:{
+        type:String,
+        required:true,
+    },
+});
+const PatModel = mongoose.model("Pat",PatSchema);
+module.exports = PatModel;
+*/
