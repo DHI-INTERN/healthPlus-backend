@@ -40,7 +40,9 @@ const mongoURI =
 //   });
 
 try {
-  mongoose.connect("mongodb://127.0.0.1:27017/hiremedy");
+  mongoose.connect(mongoURI, function (err, db) {
+    console.log("DB Conected!!!");
+  });
 } catch (error) {
   console.log("error");
   handleError(error);
