@@ -24,15 +24,12 @@ app.use("/api/user", userRoutes);
 app.use("/api", userRoutes);
 
 // DB Connection
-mongoose
-  .connect(
-    "mongodb+srv://iJai007:gN7za480EO6HT713@cluster0.gshc7im.mongodb.net/trial2"
-  )
-  .then(function () {
-    //NLnB2vd9UQrXL9ac
+const mongoURI =
+  "mongodb+srv://iJai007:gN7za480EO6HT713@cluster0.gshc7im.mongodb.net/trial2";
 
-    console.log("DB connection established");
-  });
+mongoose.connect(mongoURI, () => {
+  console.log("DB CONNECTED");
+});
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, function () {
