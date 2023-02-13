@@ -25,7 +25,7 @@ app.use("/api", userRoutes);
 
 // DB Connection\
 const mongoURI =
-  "mongodb+srv://iJai007:gN7za480EO6HT713@cluster0.gshc7im.mongodb.net/trial2";
+  "mongodb+srv://iJai007:gN7za480EO6HT713@cluster0.gshc7im.mongodb.net/Hiremedy";
 // mongoose
 //   .connect(
 //     "mongodb+srv://iJ:gN7za480EO6HT713@cluster0.gshc7im.mongodb.net/trial2"
